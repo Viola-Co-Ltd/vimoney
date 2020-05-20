@@ -2,4 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/violacom/public_html/app/2020_vimoney
-    - /bin/cp -r *.* $DEPLOYPATH
+    
+    # copy content from repository to deploy folder
+    - /bin/cp -r ./* $DEPLOYPATH
+    
+    # move content from public folder to root of deployed folder
+    - /bin/mv -r  $DEPLOYPATH/public/* $DEPLOYPATH
