@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/violacom/public_html/app/2020_vimoney
+    - /bin/cp -r *.* $DEPLOYPATH
